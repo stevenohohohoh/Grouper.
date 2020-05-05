@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.shape.Line?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.steven.groupgenerator.Controller">
+
+    <center>
+        <Label fx:id="display" alignment="CENTER" text="Welcome">
+            <font>
+                <Font name="Arial bold" size="25" />
+            </font>
+        </Label>
+    </center>
+    <bottom>
+
+
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" />
+            </padding>
+
+            <Label text="Number of Students">
+                <Font name="Arial bold" size="17" />
+            </Label>
+
+            <TextField fx:id="numOfStudent" onKeyReleased="#handleKeyReleased" prefWidth="60" />
+
+            <Button fx:id="nationalityMixButton" onAction="#nationalityMixPressed" prefHeight="50" prefWidth="180" text="Nationality Mix" textAlignment="JUSTIFY">
+                <font>
+                    <Font name="Arial bold" size="17" />
+                </font>
+            </Button>
+
+
+            <Button fx:id="homeroomMixButton" onAction="#homeroomMixClicked" prefHeight="50" prefWidth="180" text="Homeroom Mix">
+                <font>
+                    <Font name="Arial bold" size="17" />
+                </font>
+            </Button>
+            <Button fx:id="randomButton" onAction="#randomButtonClicked" prefHeight="50" prefWidth="180" text="Random">
+                <font>
+                    <Font name="Arial bold" size="17" />
+                </font>
+            </Button>
+
+
+        </HBox>
+
+
+    </bottom>
+<!--    <left>-->
+<!--        <VBox alignment="CENTER">-->
+
+<!--            <padding>-->
+<!--                <Insets left="10" top="10" />-->
+<!--            </padding>-->
+
+<!--            <fx:define>-->
+<!--                <ToggleGroup fx:id="colorToggleGroup" />-->
+<!--            </fx:define>-->
+
+<!--            <RadioButton fx:id="c1" alignment="CENTER" onAction="#isToggleSelected" text="class1" toggleGroup="$colorToggleGroup">-->
+<!--                <padding>-->
+<!--                    <Insets left="10" top="10" />-->
+<!--                </padding>-->
+<!--                <font>-->
+<!--                    <Font name="Arial bold" size="17" />-->
+<!--                </font>-->
+
+<!--            </RadioButton>-->
+
+<!--            <RadioButton fx:id="c2" alignment="CENTER" onAction="#isToggleSelected" text="class2" toggleGroup="$colorToggleGroup">-->
+<!--                <padding>-->
+<!--                    <Insets left="10" top="10" />-->
+<!--                </padding>-->
+<!--                <font>-->
+<!--                    <Font name="Arial bold" size="17" />-->
+<!--                </font>-->
+<!--            </RadioButton>-->
+
+<!--            <RadioButton fx:id="c3" alignment="CENTER" onAction="#isToggleSelected" text="class3" toggleGroup="$colorToggleGroup">-->
+<!--                <padding>-->
+<!--                    <Insets left="10" top="10" />-->
+<!--                </padding>-->
+<!--                <font>-->
+<!--                    <Font name="Arial bold" size="17" />-->
+<!--                </font>-->
+<!--            </RadioButton>-->
+
+
+<!--        </VBox>-->
+<!--    </left>-->
+    <right>
+        <VBox>
+            <padding>
+                <Insets right="10" top="10" />
+            </padding>
+
+            <Button alignment="CENTER_RIGHT" onAction="#handleClick" text="Add File" fx:id="addButton"/>
+<!--            <Button alignment="CENTER_RIGHT" onAction="#deleteClick" text="Delete File"/>-->
+
+            <Label alignment="CENTER" fx:id="numDisplay">
+                <padding>
+                    <Insets right="10" top="20" />
+                </padding>
+                <font>
+                    <Font name="Arial" size="17" />
+                </font>
+            </Label>
+        </VBox>
+
+    </right>
+
+</BorderPane>
